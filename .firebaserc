@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ecuelen": {
+      "hosting": {
+        "ecuelen": [
+          "ecuelen"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ecuelen"
+  }
+}
