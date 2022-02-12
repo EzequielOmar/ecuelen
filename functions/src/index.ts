@@ -1,9 +1,9 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
-import * as nodemailer from "nodemailer";
+// import * as nodemailer from "nodemailer";
 
 admin.initializeApp();
-
+/*
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
   port: 465,
@@ -13,10 +13,11 @@ const transporter = nodemailer.createTransport({
     pass: functions.config().access_gmail.pass,
   },
 });
-
+*/
 export const sendEmail = functions.firestore
     .document("messages/{messageId}")
     .onCreate((snap) => {
+      console.log(snap);
       return;
       /*  settear mail cuando este el formulario montado
       const mailOptions = {
