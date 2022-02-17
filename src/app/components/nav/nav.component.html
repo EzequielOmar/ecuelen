@@ -1,4 +1,4 @@
-<div class="nav">
+<div class="nav" [class.mobile]="mobile">
   <a href="/">
     <img class="brand-img" src="assets/brand/ecuelen.png" alt="ecuelen brand">
   </a>
@@ -7,7 +7,7 @@
     <div></div>
     <div></div>
   </div>
-  <nav [class.mobile]="mobile">
+  <nav>
     <ul>
       <li><a href="#home">Home</a></li>
     </ul>
@@ -20,7 +20,7 @@
     <ul>
       <li><a href="#contact">{{"menu.contact"|translate}}</a></li>
     </ul>
-    <span *ngIf="lang!='en'" (click)="changeLanguage('en')">en</span>
-    <span *ngIf="lang!='es'" (click)="changeLanguage('es')">es</span>
   </nav>
+  <span *ngIf="lang!='en'" (click)="changeLanguage('en')">en</span>
+  <span *ngIf="lang!='es'" (click)="changeLanguage('es')">es</span>
 </div>

@@ -1,0 +1,67 @@
+@import "./.././../././../styles.scss";
+
+//div with all the main content
+.main {
+  h1 {
+    width: 100%;
+  }
+  .about {
+    span {
+      margin: 2rem 0 4rem 0;
+      max-width: 300px;
+    }
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  margin: 0;
+  text-align: center;
+  min-height: 350px;
+  justify-content: center;
+  align-content: center;
+  width: 100vw;
+}
+
+//button to contact
+.btn {
+  img {
+    height: 1.5rem;
+    padding: 0 1rem;
+    margin-top: 2px;
+  }
+  button {
+    &:hover{
+      background: lighten($color: $orange, $amount: 10);
+    }
+    a {
+      color: $white;
+      text-decoration-line: none;
+      text-transform: capitalize;
+    }
+    cursor: pointer;
+    background: $orange;
+    border: none;
+    border-radius: 7px;
+    padding: 0.4rem 2rem;
+  }
+  display: flex;
+  vertical-align: middle;
+  justify-content: center;
+}
+
+//h1 text style
+.programming,
+.design,
+.and {
+  font-size: xxx-large;
+  @media screen and (max-width: $small) {
+    font-size: xx-large;
+  }
+}
+.design,
+.and {
+  color: $orange;
+}
+.and {
+  font-weight: 100;
+}

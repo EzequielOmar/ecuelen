@@ -21,4 +21,11 @@ $medium: 725px;
 //general
 body {
   margin: 0;
+  color: $white;
+  font-family: "Monserrat";
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
 }

@@ -9,7 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent {
   title = 'ecuelen';
-  language: string = 'en';
+  language: string = 'es';
   pageYoffset = 0;
   @HostListener('window:scroll', ['$event']) onScroll() {
     this.pageYoffset = window.pageYOffset;
