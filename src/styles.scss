@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+//fonts
+@font-face {
+  font-family: "Monserrat";
+  src: local("Monserrat"),
+    url(./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf)
+      format("truetype");
+}
+
+//colors
+$orange: #cc6633;
+$white: #ffffff;
+$grey: #cccccc;
+$black_traslucid: #00000087;
+
+//breakpoints
+$small: 575px;
+$medium: 725px;
+
+//general
+body {
+  margin: 0;
+}
