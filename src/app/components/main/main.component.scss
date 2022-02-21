@@ -1,7 +1,16 @@
 @import "./.././../././../styles.scss";
 
+:host {
+  width: 100vw;
+  height: 87vh;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+}
+
 //div with all the main content
-.main {
   h1 {
     width: 100%;
   }
@@ -14,13 +23,6 @@
     display: flex;
     justify-content: center;
   }
-  margin: 0;
-  text-align: center;
-  min-height: 350px;
-  justify-content: center;
-  align-content: center;
-  width: 100vw;
-}
 
 //button to contact
 .btn {
@@ -30,7 +32,7 @@
     margin-top: 2px;
   }
   button {
-    &:hover{
+    &:hover {
       background: lighten($color: $orange, $amount: 10);
     }
     a {

@@ -1,6 +1,7 @@
+//modules
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppComponent } from './app.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 //environment
 import { environment } from '../environments/environment';
 //firebase
@@ -10,14 +11,19 @@ import {
   ScreenTrackingService,
   UserTrackingService,
 } from '@angular/fire/analytics';
+import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
+//ngx-translate
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+//components
+import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
 import { MainComponent } from './components/main/main.component';
+import { UsComponent } from './components/us/us.component';
+
 @NgModule({
-  declarations: [AppComponent, NavComponent, MainComponent],
+  declarations: [AppComponent, NavComponent, MainComponent, UsComponent],
   imports: [
     FormsModule,
     ReactiveFormsModule,
@@ -25,6 +31,7 @@ import { MainComponent } from './components/main/main.component';
     HttpClientModule,
     // initialize firebase tools
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAnalyticsModule,
     // ngx-translate and the loader module
     TranslateModule.forRoot({
       loader: {

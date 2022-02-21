@@ -1,20 +1,28 @@
 @import "./.././../././../styles.scss";
 
-//div with all the nav
-.nav {
-  //logo img
-  .brand-img {
-    width: 185px;
-    padding-left: 1rem;
-    margin-top: 5px;
-  }
+:host {
   width: 100vw;
-  min-height: 70px;
   background: $black_traslucid;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  @media screen and (max-width: $small) {
+    position: fixed;
+  }
+}
+
+//brand div with nav height
+.brand {
+  //logo img
+  img {
+    width: 185px;
+    padding-left: 1rem;
+    margin-top: 5px;
+  }
+  display: flex;
+  align-items: center;
+  height: 5rem;
 }
 
 //mobile icon
@@ -54,18 +62,14 @@
   }
 }
 
-//nav
 nav {
-  ul {
-    li {
-      list-style: none;
-    }
-    padding: 0;
-  }
   display: flex;
   align-items: center;
   min-width: 350px;
   justify-content: space-around;
+  justify-content: space-between;
+  width: 60%;
+  justify-content: space-between;
   @media screen and (min-width: $medium) {
     min-width: 480px;
   }
@@ -74,15 +78,32 @@ nav {
   }
 }
 
+span {
+  padding: 0 1rem 0 0;
+  @media screen and (max-width: $small) {
+    display: none;
+  }
+}
+
 //nav on mobile
 .mobile {
-  nav,
-  span {
-    display: block;
-    width: 100vw;
-    background: $black_traslucid;
-    text-align: center;
+  ul {
+    li:first-child {
+      padding-top: 1rem;
+    }
+    li {
+      width: 100%;
+      padding-bottom: 1rem;
+      font-size: large;
+    }
+    display: flex;
+    flex-wrap: wrap;
   }
+  display: block;
+  width: 100vw;
+  background: $black_traslucid;
+  text-align: center;
+  padding: 0;
 }
 
 //links style
@@ -94,11 +115,4 @@ span {
   cursor: pointer;
   color: $white;
   text-decoration-line: none;
-}
-
-span {
-  padding: 0 1rem;
-  @media screen and (max-width: $small) {
-    display: none;
-  }
 }

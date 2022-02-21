@@ -1,4 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  HostListener,
+  Input,
+  OnInit,
+  Output,
+} from '@angular/core';
 
 @Component({
   selector: 'app-nav',
@@ -9,6 +16,9 @@ export class NavComponent implements OnInit {
   mobile: boolean = false;
   @Output() languageSelected: EventEmitter<string> = new EventEmitter();
   @Input() lang?: string;
+  @HostListener('window:resize', ['$event']) onResize() {
+    this.hideMobileMenu();
+  }
 
   constructor() {}
 
@@ -16,5 +26,9 @@ export class NavComponent implements OnInit {
 
   changeLanguage(lang: string) {
     this.languageSelected.emit(lang);
+  }
+
+  hideMobileMenu() {
+    this.mobile = false;
   }
 }

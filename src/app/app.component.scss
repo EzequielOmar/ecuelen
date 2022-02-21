@@ -5,3 +5,21 @@
   height: 100vh;
   background-size: cover;
 }
+
+.scroll-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: larger;
+  border-radius: 10px;
+  border-width: 1px;
+  padding: 0.2rem 0.3rem 0.3rem 0.3rem;
+  color: $white;
+  background: $black_traslucid;
+}
+
+.scroll-to-top:hover {
+  background: lighten($black_traslucid, 15);
+}

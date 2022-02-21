@@ -1,0 +1,73 @@
+@import "./.././../././../styles.scss";
+
+:host {
+  width: 100vw;
+}
+
+.us,
+h3,
+p,
+h2,
+.icons {
+  width: 100%;
+}
+
+//div que contiene todo
+.us {
+  h3 {
+    font-weight: 100;
+    margin: 0;
+    padding: 3rem 0;
+  }
+  h2,
+  h3,
+  .box {
+    color: $black_traslucid;
+  }
+  h2 {
+    margin: 1rem;
+  }
+  height: 100vh;
+  text-align: center;
+  justify-content: center;
+  align-content: space-between;
+}
+
+.box {
+  padding: 2rem 4rem;
+  border-right: 3px solid $orange;
+  border-left: 3px solid $orange;
+  @media screen and (max-width: $small) {
+    padding: 0rem 1rem;
+    width: 70%;
+  }
+}
+
+//iconos
+.icons {
+  p {
+    font-weight: 900;
+    font-size: larger;
+    margin: 0;
+  }
+  background: $orange;
+  padding: 2rem 0;
+  margin: 2rem 0;
+  justify-content: space-evenly;
+  @media screen and (max-width: $small) {
+    img {
+      width: 60px;
+    }
+    p {
+      font-size: small;
+    }
+    li {
+      padding: 0.5rem 0;
+    }
+  }
+}
+
+.orange {
+  color: $orange;
+  font-weight: bolder;
+}

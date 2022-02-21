@@ -1,26 +1,20 @@
-<div class="nav" [class.mobile]="mobile">
+<div class="brand">
   <a href="/">
-    <img class="brand-img" src="assets/brand/ecuelen.png" alt="ecuelen brand">
+    <img src="assets/brand/ecuelen.png" alt="ecuelen brand">
   </a>
-  <div class="mobile-icon" [class.res]="mobile" (click)="mobile = !mobile">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-    </ul>
-    <ul>
-      <li><a href="#us">{{"menu.us"|translate}}</a></li>
-    </ul>
-    <ul>
-      <li><a href="#services">{{"menu.services"|translate}}</a></li>
-    </ul>
-    <ul>
-      <li><a href="#contact">{{"menu.contact"|translate}}</a></li>
-    </ul>
-  </nav>
-  <span *ngIf="lang!='en'" (click)="changeLanguage('en')">en</span>
-  <span *ngIf="lang!='es'" (click)="changeLanguage('es')">es</span>
 </div>
+<div class="mobile-icon" [class.res]="mobile" (click)="mobile = !mobile">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+<nav [class.mobile]="mobile">
+  <ul class="list-style-none">
+    <li><a (click)="hideMobileMenu()" href="#home">Home</a></li>
+    <li><a (click)="hideMobileMenu()" href="#us">{{"menu.us"|translate}}</a></li>
+    <li><a (click)="hideMobileMenu()" href="#services">{{"menu.services"|translate}}</a></li>
+    <li><a (click)="hideMobileMenu()" href="#contact">{{"menu.contact"|translate}}</a></li>
+  </ul>
+</nav>
+<span [class.mobile]="mobile" *ngIf="lang!='en'" (click)="changeLanguage('en')">en</span>
+<span [class.mobile]="mobile" *ngIf="lang!='es'" (click)="changeLanguage('es')">es</span>

@@ -15,7 +15,7 @@ $grey: #cccccc;
 $black_traslucid: #00000087;
 
 //breakpoints
-$small: 575px;
+$small: 620px;
 $medium: 725px;
 
 //general
@@ -25,7 +25,22 @@ body {
   font-family: "Monserrat";
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .flex-wrap {
   display: flex;
   flex-wrap: wrap;
+}
+
+.list-style-none {
+  li {
+    list-style: none;
+  }
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
