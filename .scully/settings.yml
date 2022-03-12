@@ -1,0 +1,11 @@
+identifier: lf0bo641nau2jdl8
+appPort: 1864
+staticPort: 1668
+reloadPort: 2667
+hostName: localhost
+projectName: ecuelen
+homeFolder: /home/ezequielomar/proyectos/ecuelen
+distFolder: dist/ecuelen
+outDir: /home/ezequielomar/proyectos/ecuelen/dist/static
+handle404: ''
+allowErrorCollect: true

@@ -2,9 +2,6 @@
 #assets
 src/assets
 
-#build
-/public
-
 # compiled output
 /dist
 /tmp

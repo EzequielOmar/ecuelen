@@ -4,7 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "npm run build-angular && npm run build-scully",
+    "build-angular": "ng build",
+    "build-scully": "npx scully",
+    "scanRoutes": "npx scully --scanRoutes",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -21,6 +24,9 @@
     "@angular/router": "~12.2.0",
     "@ngx-translate/core": "^13.0.0",
     "@ngx-translate/http-loader": "^6.0.0",
+    "@scullyio/ng-lib": "^2.1.25",
+    "@scullyio/scully": "^2.1.25",
+    "@scullyio/scully-plugin-puppeteer": "^2.1.25",
     "firebase": "^9.6.4",
     "rxfire": "^6.0.0",
     "rxjs": "~6.6.0",

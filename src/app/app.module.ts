@@ -21,10 +21,20 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
 import { MainComponent } from './components/main/main.component';
 import { UsComponent } from './components/us/us.component';
+import { MainPageComponent } from './pages/main-page/main-page.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 
 @NgModule({
-  declarations: [AppComponent, NavComponent, MainComponent, UsComponent],
+  declarations: [
+    AppComponent,
+    NavComponent,
+    MainComponent,
+    UsComponent,
+    MainPageComponent,
+  ],
   imports: [
+    AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,
@@ -40,6 +50,8 @@ import { UsComponent } from './components/us/us.component';
         deps: [HttpClient],
       },
     }),
+    //scully to compyle SSG
+    ScullyLibModule,
   ],
   providers: [
     ScreenTrackingService,
