@@ -24,6 +24,7 @@ import { UsComponent } from './components/us/us.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ScullyLibModule } from '@scullyio/ng-lib';
+import { ServicesComponent } from './components/services/services.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
     MainComponent,
     UsComponent,
     MainPageComponent,
+    ServicesComponent,
   ],
   imports: [
     AppRoutingModule,

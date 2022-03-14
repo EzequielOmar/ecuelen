@@ -1,18 +1,6 @@
-@import "./.././../././../styles.scss";
+@import "./../../../styles.scss";
 
-:host {
-  width: 100vw;
-}
-
-.us,
-h3,
-p,
-h2,
-.icons {
-  width: 100%;
-}
-
-//div que contiene todo
+//div with all section
 .us {
   h3 {
     font-weight: 100;
@@ -37,13 +25,13 @@ h2,
   padding: 2rem 4rem;
   border-right: 3px solid $orange;
   border-left: 3px solid $orange;
-  @media screen and (max-width: $small) {
+  @media screen and (max-width: $medium) {
     padding: 0rem 1rem;
     width: 70%;
   }
 }
 
-//iconos
+//icons
 .icons {
   p {
     font-weight: 900;
@@ -54,7 +42,7 @@ h2,
   padding: 2rem 0;
   margin: 2rem 0;
   justify-content: space-evenly;
-  @media screen and (max-width: $small) {
+  @media screen and (max-width: $medium) {
     img {
       width: 60px;
     }

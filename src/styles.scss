@@ -15,10 +15,11 @@ $grey: #cccccc;
 $black_traslucid: #00000087;
 
 //breakpoints
-$small: 620px;
-$medium: 725px;
+$small: 420px;
+$medium: 620px;
+$large: 725px;
 
-//general
+//body
 body {
   margin: 0;
   color: $white;
@@ -29,6 +30,7 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+//classes
 .flex-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -43,6 +45,10 @@ body::-webkit-scrollbar {
   width: 100%;
   display: flex;
   justify-content: space-around;
+}
+
+.w-100 {
+  width: 100%;
 }
 
 //background images

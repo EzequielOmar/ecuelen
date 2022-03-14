@@ -1,0 +1,58 @@
+@import "./../../../styles.scss";
+
+:host {
+  text-align: -webkit-center;
+  justify-content: center;
+  align-content: space-between;
+}
+
+h3 {
+  span {
+    color: $orange;
+    font-weight: 600;
+  }
+  font-weight: 100;
+  margin: 0;
+  padding: 3rem 0;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: x-large;
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 0.5rem;
+  color: $orange;
+  margin: 0.5rem;
+  max-width: 150px;
+  @media screen and (max-width: $medium) {
+    font-size: medium;
+  }
+}
+
+.services {
+  li {
+    img {
+      max-width: 80px;
+    }
+    p {
+      font-size: x-small;
+    }
+    width: 25%;
+  }
+  align-items: baseline;
+  @media screen and (max-width: $small) {
+    li {
+      width: 70%;
+    }
+    display: block !important;
+  }
+}
+
+.process {
+  li {
+    img {
+      max-width: 60px;
+    }
+  }
+}

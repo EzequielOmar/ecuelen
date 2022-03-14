@@ -1,13 +1,12 @@
 @import "./.././../././../styles.scss";
 
 :host {
-  width: 100vw;
   background: $black_traslucid;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  @media screen and (max-width: $small) {
+  @media screen and (max-width: $medium) {
     position: fixed;
   }
 }
@@ -28,7 +27,7 @@
 //mobile icon
 .mobile-icon {
   display: none;
-  @media screen and (max-width: $small) {
+  @media screen and (max-width: $medium) {
     div {
       height: 4px;
       z-index: 999;
@@ -70,17 +69,17 @@ nav {
   justify-content: space-between;
   width: 60%;
   justify-content: space-between;
-  @media screen and (min-width: $medium) {
+  @media screen and (min-width: $large) {
     min-width: 480px;
   }
-  @media screen and (max-width: $small) {
+  @media screen and (max-width: $medium) {
     display: none;
   }
 }
 
 span {
   padding: 0 1rem 0 0;
-  @media screen and (max-width: $small) {
+  @media screen and (max-width: $medium) {
     display: none;
   }
 }

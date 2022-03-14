@@ -1,9 +1,13 @@
 <section id="home" class="main-bg-image flex-wrap">
-  <app-nav [lang]="language" (languageSelected)="setLanguage($event)"></app-nav>
-  <app-main></app-main>
+  <app-nav
+    class="w-100"
+    [lang]="language"
+    (languageSelected)="setLanguage($event)"
+  ></app-nav>
+  <app-main class="flex-wrap w-100"></app-main>
 </section>
-<app-us></app-us>
-
+<app-us id="us" class="w-100"></app-us>
+<app-services id="services" class="main-bg-image flex-wrap"></app-services>
 <button (click)="scrollToTop()" *ngIf="pageYoffset > 300" class="scroll-to-top">
   &#x022C0;
 </button>
