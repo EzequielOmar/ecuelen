@@ -1,9 +1,8 @@
 @import "./../../../styles.scss";
 
 :host {
-  text-align: -webkit-center;
   justify-content: center;
-  align-content: space-between;
+  align-content: stretch;
 }
 
 h3 {
@@ -11,7 +10,7 @@ h3 {
     color: $orange;
     font-weight: 600;
   }
-  font-weight: 100;
+  font-weight: 400;
   margin: 0;
   padding: 3rem 0;
 }
@@ -28,6 +27,9 @@ h4 {
   @media screen and (max-width: $medium) {
     font-size: medium;
   }
+  @media screen and (max-width: $small) {
+    font-size: small;
+  }
 }
 
 .services {
@@ -36,23 +38,27 @@ h4 {
       max-width: 80px;
     }
     p {
-      font-size: x-small;
+      font-size: 0.65rem;
     }
     width: 25%;
   }
   align-items: baseline;
   @media screen and (max-width: $small) {
     li {
+      img {
+        max-width: 60px;
+      }
       width: 70%;
+      margin: auto;
     }
     display: block !important;
   }
 }
 
-.process {
-  li {
-    img {
-      max-width: 60px;
-    }
-  }
-}
+//.process {
+//  li {
+//    img {
+//      max-width: 60px;
+//    }
+//  }
+//}

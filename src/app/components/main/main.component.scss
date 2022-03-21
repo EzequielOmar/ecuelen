@@ -2,60 +2,51 @@
 
 :host {
   height: 87vh;
-  text-align: center;
   justify-content: center;
   align-content: center;
 }
 
-.about {
-  span {
-    margin: 2rem 0 4rem 0;
-    max-width: 300px;
-  }
-  display: flex;
-  justify-content: center;
-}
-
-//button to contact
-.btn {
-  img {
-    height: 1.5rem;
-    padding: 0 1rem;
-    margin-top: 2px;
-  }
-  button {
-    &:hover {
-      background: lighten($color: $orange, $amount: 10);
-    }
-    a {
-      color: $white;
-      text-decoration-line: none;
-      text-transform: capitalize;
-    }
-    cursor: pointer;
-    background: $orange;
-    border: none;
-    border-radius: 7px;
-    padding: 0.4rem 2rem;
-  }
-  display: flex;
-  vertical-align: middle;
-  justify-content: center;
-}
-
 //h1 text style
-.programming,
-.design,
-.and {
-  font-size: xxx-large;
-  @media screen and (max-width: $medium) {
-    font-size: xx-large;
+h1 {
+  & > span {
+    font-size: xxx-large;
+    @media screen and (max-width: $medium) {
+      font-size: xx-large;
+    }
   }
+  margin-bottom: 3rem;
 }
+
 .design,
 .and {
   color: $orange;
 }
 .and {
-  font-weight: 100;
+  font-weight: 400;
+}
+
+//contact button
+button {
+  img {
+    height: 1.5rem;
+    padding: 0 1rem 0 0;
+    margin-top: 2px;
+  }
+  &:hover {
+    background: lighten($color: $orange, $amount: 10);
+  }
+  a {
+    color: $white;
+    text-decoration-line: none;
+    text-transform: capitalize;
+  }
+  cursor: pointer;
+  background: $orange;
+  border: none;
+  border-radius: 7px;
+  padding: 0.4rem 2rem;
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
 }

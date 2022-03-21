@@ -51,9 +51,21 @@ body::-webkit-scrollbar {
   width: 100%;
 }
 
+.text-align-center{
+  text-align: center;
+  text-align: -moz-center;
+  text-align: -webkit-center;
+}
+
 //background images
 .main-bg-image {
   background: url("assets/images/main-bg.png");
-  height: 100vh;
   background-size: cover;
+  height: 100vh;
+}
+
+.main-bg-image_black {
+  background: url("assets/images/main-bg_black.png");
+  background-size: cover;
+  height: 100vh;
 }
