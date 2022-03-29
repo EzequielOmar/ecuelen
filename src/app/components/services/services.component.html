@@ -3,37 +3,37 @@
   <span>{{ "services.services" | translate }}</span>
 </h3>
 
-<ul class="services list-style-none w-100">
-  <li>
-    <img src="assets/images/services_1-branding.png" alt="icon-branding" />
-    <h4>{{ "services.1" | translate }}</h4>
-    <p>{{ "services.1-desc" | translate }}</p>
+<ul
+  itemprop="hasOfferCatalog"
+  itemscope
+  itemtype="https://schema.org/OfferCatalog"
+  class="services list-style-none w-100"
+>
+  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Thing">
+    <img
+      itemprop="image"
+      src="assets/images/services_1-branding.png"
+      alt="icon-branding"
+    />
+    <h4 itemprop="name">{{ "services.1" | translate }}</h4>
+    <p itemprop="description">{{ "services.1-desc" | translate }}</p>
   </li>
-  <li>
-    <img src="assets/images/services_2-developing.png" alt="icon-developing" />
-    <h4>{{ "services.2" | translate }}</h4>
-    <p>{{ "services.2-desc" | translate }}</p>
+  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Thing">
+    <img
+      itemprop="image"
+      src="assets/images/services_2-developing.png"
+      alt="icon-developing"
+    />
+    <h4 itemprop="name">{{ "services.2" | translate }}</h4>
+    <p itemprop="description">{{ "services.2-desc" | translate }}</p>
   </li>
-  <li>
-    <img src="assets/images/services_3-marketing.png" alt="icon-marketing" />
-    <h4>{{ "services.3" | translate }}</h4>
-    <p>{{ "services.3-desc" | translate }}</p>
+  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Thing">
+    <img
+      itemprop="image"
+      src="assets/images/services_3-marketing.png"
+      alt="icon-marketing"
+    />
+    <h4 itemprop="name">{{ "services.3" | translate }}</h4>
+    <p itemprop="description">{{ "services.3-desc" | translate }}</p>
   </li>
 </ul>
-
-<!--
-  <ul class="process list-style-none w-100">
-    <li>
-      <img src="assets/images/services_4-meeting.png" alt="icon-branding" />
-    <p>{{ "services.process.1" | translate }}</p>
-  </li>
-  <li>
-    <img src="assets/images/services_5-research.png" alt="icon-developing" />
-    <p>{{ "services.process.2" | translate }}</p>
-  </li>
-  <li>
-    <img src="assets/images/services_6-idea.png" alt="icon-marketing" />
-    <p>{{ "services.process.3" | translate }}</p>
-  </li>
-</ul>
--->

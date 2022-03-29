@@ -4,8 +4,8 @@ staticPort: 1668
 reloadPort: 2667
 hostName: localhost
 projectName: ecuelen
-homeFolder: /home/ezequielomar/proyectos/ecuelen
+homeFolder: /home/ezequiel/Proyectos/ecuelen
 distFolder: dist/ecuelen
-outDir: /home/ezequielomar/proyectos/ecuelen/dist/static
+outDir: /home/ezequiel/Proyectos/ecuelen/dist/static
 handle404: ''
 allowErrorCollect: true

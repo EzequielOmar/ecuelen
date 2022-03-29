@@ -1,6 +1,11 @@
 <div class="brand">
   <a href="/">
-    <img src="assets/brand/ecuelen.png" alt="ecuelen brand">
+    <img
+      itemprop="logo"
+      itemprop="url"
+      src="assets/brand/ecuelen.png"
+      alt="ecuelen brand"
+    />
   </a>
 </div>
 <!--Hamburguer icon-->
@@ -12,10 +17,30 @@
 <nav [class.mobile]="mobile">
   <ul class="list-style-none">
     <li><a (click)="hideMobileMenu()" href="#home">Home</a></li>
-    <li><a (click)="hideMobileMenu()" href="#us">{{"menu.us"|translate}}</a></li>
-    <li><a (click)="hideMobileMenu()" href="#services">{{"menu.services"|translate}}</a></li>
-    <li><a (click)="hideMobileMenu()" href="#contact">{{"menu.contact"|translate}}</a></li>
+    <li>
+      <a (click)="hideMobileMenu()" href="#us">{{ "menu.us" | translate }}</a>
+    </li>
+    <li>
+      <a (click)="hideMobileMenu()" href="#services">{{
+        "menu.services" | translate
+      }}</a>
+    </li>
+    <li>
+      <a (click)="hideMobileMenu()" href="#contact">{{
+        "menu.contact" | translate
+      }}</a>
+    </li>
   </ul>
 </nav>
-<span [class.mobile]="mobile" *ngIf="lang!='en'" (click)="changeLanguage('en')">en</span>
-<span [class.mobile]="mobile" *ngIf="lang!='es'" (click)="changeLanguage('es')">es</span>
+<span
+  [class.mobile]="mobile"
+  *ngIf="lang != 'en'"
+  (click)="changeLanguage('en')"
+  >en</span
+>
+<span
+  [class.mobile]="mobile"
+  *ngIf="lang != 'es'"
+  (click)="changeLanguage('es')"
+  >es</span
+>
