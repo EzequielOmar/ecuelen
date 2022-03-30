@@ -1,0 +1,94 @@
+<h3 class="w-100">{{ "contact.contact" | translate }}</h3>
+<div id="contact" class="w-100 flex-wrap">
+  <!--Contact Us message-->
+  <div>
+    <div class="orange-border">
+      {{ "contact.message-1" | translate }}<br />
+      {{ "contact.message-2" | translate }}
+    </div>
+  </div>
+  <!--Contact Form-->
+  <div>
+    <!--Contact Form-->
+    <form class="flex-wrap w-100" [formGroup]="contactForm" (ngSubmit)="send()">
+      <!--Success/Error Messages-->
+      <div
+        *ngIf="success"
+        class="border-2 border-contrast_dark rounded p-2 mb-4"
+      >
+        {{ "form.success" | translate }}
+      </div>
+      <div *ngIf="error" class="border-2 rounded p-2 mb-4 error">
+        {{ "form.error" | translate }}
+      </div>
+      <!--Name Input-->
+      <label for="name" class="flex">
+        <img src="assets/images/contact_1-name.png" alt="user icon" />
+        <input
+          formControlName="name"
+          type="name"
+          name="name"
+          placeholder="**{{ 'contact.form.name' | translate }}"
+          [class.error]="contactForm.controls['name'].errors && sended"
+          class="form-input"
+      /></label>
+      <!--Email Input-->
+      <label for="email" class="flex">
+        <img src="assets/images/contact_2-email.png" alt="email icon" />
+        <input
+          formControlName="email"
+          type="email"
+          name="email"
+          placeholder="**{{ 'contact.form.email' | translate }}"
+          [class.error]="contactForm.controls['email'].errors && sended"
+          class="form-input"
+      /></label>
+      <!--Phone Input-->
+      <label for="tel" class="flex">
+        <img src="assets/images/contact_3-phone.png" alt="phone icon" />
+        <input
+          formControlName="phone"
+          type="tel"
+          name="tel"
+          placeholder="00000000000"
+          class="form-input"
+      /></label>
+      <!--Message Text Area-->
+      <label for="message" class="flex">
+        <img src="assets/images/contact_4-message.png" alt="chat icon" />
+        <textarea
+          formControlName="message"
+          type="text"
+          name="message"
+          placeholder="**{{ 'contact.form.message' | translate }}"
+          [class.error]="contactForm.controls['message'].errors && sended"
+          class="form-input h-32"
+        ></textarea>
+      </label>
+      <!--Contact Form - Button Submit-->
+      <label for="submit">
+        <button type="submit">
+          {{ "contact.form.submit" | translate }}
+        </button>
+      </label>
+    </form>
+  </div>
+</div>
+<!--Footer-->
+<footer class="w-100 flex-wrap text-align-center">
+  <a href="mailto:name@email.com" target="_blank" class="flex">
+    <img src="assets/images/contact_2-email.png" alt="email icon" />
+    <span>ecuelen@hotmail.com</span>
+  </a>
+  <a href="/">
+    <img
+      id="footer-logo"
+      src="assets/brand/ecuelen.png"
+      alt="ecuelend brand logo"
+    />
+  </a>
+  <div class="flex">
+    <img src="assets/images/contact_5-place.png" alt="email icon" />
+    <span>Buenos Aires, Argentina</span>
+  </div>
+</footer>

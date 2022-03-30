@@ -1,0 +1,105 @@
+@import "../../../styles.scss";
+
+h3 {
+  font-weight: 500;
+  color: $black_traslucid;
+}
+
+#contact {
+  //contact message
+  & div:nth-of-type(1) {
+    //orange box
+    .orange-border {
+      background: $orange;
+      width: 90%;
+      font-size: x-large;
+      border-radius: 0 20px 20px 0;
+      padding: 1rem 2.5rem 1rem 0;
+      margin-top: 4rem;
+      text-align: right;
+    }
+    width: 50%;
+    text-align: center;
+  }
+  //contact form
+  & div:nth-of-type(2) {
+    form {
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+    width: 50%;
+  }
+}
+
+//label form style
+label {
+  img {
+    width: 25px;
+    vertical-align: super;
+    height: -webkit-fill-available;
+  }
+  input,
+  textarea {
+    &:focus {
+      border-color: lighten($color: $orange, $amount: 10);
+      outline: none;
+    }
+    width: 80%;
+    border: 2px solid $orange;
+    background: $grey;
+    color: $black;
+    border-radius: 5px;
+    padding: 0.4rem;
+    font-family: "Monserrat";
+  }
+  ::placeholder {
+    color: $black_traslucid;
+  }
+  width: 90%;
+  justify-content: space-around;
+}
+
+//send button
+label:last-of-type {
+  button {
+    &:hover {
+      background: lighten($color: $orange, $amount: 10);
+    }
+    background: $orange;
+    color: $white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0 1rem;
+    font-size: larger;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  text-align: end;
+}
+
+//footer
+footer {
+  #footer-logo {
+    width: 175px;
+  }
+  img {
+    width: 30px;
+  }
+  a,
+  div {
+    align-items: center;
+  }
+  a {
+    text-decoration: none;
+  }
+  span {
+    color: $orange;
+    margin: 0 0.5rem;
+  }
+  height: 5rem;
+  background: $black;
+  align-self: self-end;
+  justify-content: space-around;
+  align-items: center;
+}

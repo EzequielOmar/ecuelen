@@ -11,9 +11,15 @@
   id="services"
   class="main-bg-image_black text-align-center flex-wrap"
 ></app-services>
+<app-contact
+  id="contact"
+  class="text-align-center flex-wrap h-100"
+></app-contact>
+<!--WhatsApp button-->
 <a href="https://wa.link/xqdy2i" target="_blank" class="ws-button">
   <img src="assets/images/whatsapp.png" alt="whatsapp-logo" />
 </a>
+<!--Scroll to top button-->
 <button (click)="scrollToTop()" *ngIf="pageYoffset > 300" class="scroll-to-top">
   &#x022C0;
 </button>

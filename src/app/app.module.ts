@@ -25,6 +25,7 @@ import { MainPageComponent } from './pages/main-page/main-page.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ScullyLibModule } from '@scullyio/ng-lib';
 import { ServicesComponent } from './components/services/services.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ServicesComponent } from './components/services/services.component';
     UsComponent,
     MainPageComponent,
     ServicesComponent,
+    ContactComponent,
   ],
   imports: [
     AppRoutingModule,
