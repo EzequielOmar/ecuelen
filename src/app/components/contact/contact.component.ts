@@ -25,9 +25,6 @@ export class ContactComponent {
 
   send() {
     this.sended = true;
-    setTimeout(() => {
-      this.sended = false;
-    }, 4000);
     if (this.contactForm.valid) {
       this.loading = true;
       this.sm
@@ -36,16 +33,18 @@ export class ContactComponent {
           this.success = true;
           setTimeout(() => {
             this.success = false;
-          }, 4000);
+          }, 3000);
         })
         .catch(() => {
+          console.log('error');
           this.error = true;
           setTimeout(() => {
             this.error = false;
-          }, 4000);
+          }, 3000);
         })
         .finally(() => {
           this.loading = false;
+          this.sended = false;
           this.contactForm.reset();
         });
     }

@@ -11,18 +11,15 @@
   <div>
     <!--Contact Form-->
     <form class="flex-wrap w-100" [formGroup]="contactForm" (ngSubmit)="send()">
-      <!--Success/Error Messages-->
-      <div
-        *ngIf="success"
-        class="border-2 border-contrast_dark rounded p-2 mb-4"
-      >
-        {{ "form.success" | translate }}
-      </div>
-      <div *ngIf="error" class="border-2 rounded p-2 mb-4 error">
-        {{ "form.error" | translate }}
-      </div>
+      <!--Error Message-->
+      <span *ngIf="error">
+        {{ "contact.form.error" | translate }}
+      </span>
       <!--Name Input-->
-      <label for="name" class="flex">
+      <label for="name" class="flex-wrap">
+        <span *ngIf="contactForm.controls['name'].errors && sended">
+          {{ "contact.form.required" | translate }}</span
+        >
         <img src="assets/images/contact_1-name.png" alt="user icon" />
         <input
           formControlName="name"
@@ -33,7 +30,10 @@
           class="form-input"
       /></label>
       <!--Email Input-->
-      <label for="email" class="flex">
+      <label for="email" class="flex-wrap">
+        <span *ngIf="contactForm.controls['email'].errors && sended">
+          {{ "contact.form.required" | translate }}
+        </span>
         <img src="assets/images/contact_2-email.png" alt="email icon" />
         <input
           formControlName="email"
@@ -44,7 +44,7 @@
           class="form-input"
       /></label>
       <!--Phone Input-->
-      <label for="tel" class="flex">
+      <label for="tel" class="flex-wrap">
         <img src="assets/images/contact_3-phone.png" alt="phone icon" />
         <input
           formControlName="phone"
@@ -54,9 +54,13 @@
           class="form-input"
       /></label>
       <!--Message Text Area-->
-      <label for="message" class="flex">
+      <label for="message" class="flex-wrap">
+        <span *ngIf="contactForm.controls['message'].errors && sended">
+          {{ "contact.form.required" | translate }}</span
+        >
         <img src="assets/images/contact_4-message.png" alt="chat icon" />
         <textarea
+          rows="4"
           formControlName="message"
           type="text"
           name="message"
@@ -67,8 +71,14 @@
       </label>
       <!--Contact Form - Button Submit-->
       <label for="submit">
-        <button type="submit">
-          {{ "contact.form.submit" | translate }}
+        <button type="submit" [class.success]="success" class="flex">
+          <img *ngIf="loading" src="assets/images/spinner.svg" alt="spinner" />
+          <span *ngIf="!success">
+            {{ "contact.form.submit" | translate }}
+          </span>
+          <span *ngIf="success">
+            {{ "contact.form.submited" | translate }}
+          </span>
         </button>
       </label>
     </form>
@@ -80,15 +90,12 @@
     <img src="assets/images/contact_2-email.png" alt="email icon" />
     <span>ecuelen@hotmail.com</span>
   </a>
-  <a href="/">
-    <img
-      id="footer-logo"
-      src="assets/brand/ecuelen.png"
-      alt="ecuelend brand logo"
-    />
-  </a>
   <div class="flex">
     <img src="assets/images/contact_5-place.png" alt="email icon" />
     <span>Buenos Aires, Argentina</span>
   </div>
+  <a href="#home" class="flex">
+    <img src="assets/brand/logo_orange.png" alt="ecuelend brand logo" />
+    <span>ecuélen &#x000A9; 2022</span>
+  </a>
 </footer>

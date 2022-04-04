@@ -11,6 +11,17 @@ export class MainPageComponent {
   language: string = 'es';
   pageYoffset = 0;
   @HostListener('window:scroll', ['$event']) onScroll() {
+    //   console.log(window.pageYOffset);
+    //   console.log(this.pageYoffset);
+
+    if (window.pageYOffset > this.pageYoffset) {
+      if (this.pageYoffset < window.innerHeight)
+        window.scroll({
+          top: window.innerHeight,
+          left: 0,
+          behavior: 'auto',
+        });
+    } else console.log('scroll up');
     this.pageYoffset = window.pageYOffset;
   }
 

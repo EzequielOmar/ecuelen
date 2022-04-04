@@ -58,7 +58,7 @@ h3 {
     width: 50%;
     height: 0;
     align-items: center;
-    @media screen and (max-width: $small) {
+    @media screen and (max-width: $medium) {
       width: 100%;
       margin: 1rem 0;
     }

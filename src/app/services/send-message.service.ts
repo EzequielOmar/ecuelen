@@ -14,9 +14,6 @@ export class SendMessageService {
     return await this.db
       .collection(this.dbName)
       .doc(date.toLocaleString().replace('/', '-').replace('/', '-'))
-      .set(data)
-      .catch((err) => {
-        console.log(err);
-      });
+      .set(data);
   };
 }
