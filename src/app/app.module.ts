@@ -1,6 +1,7 @@
 //modules
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 //environment
 import { environment } from '../environments/environment';
@@ -43,6 +44,8 @@ import { ContactComponent } from './components/contact/contact.component';
     ReactiveFormsModule,
     BrowserModule,
     HttpClientModule,
+    BrowserModule,
+    BrowserAnimationsModule,
     // initialize firebase tools
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule,

@@ -11,6 +11,9 @@ h3 {
     font-weight: 600;
   }
   font-weight: 400;
+  margin: 0;
+  padding-top: 3rem;
+  font-size: 1.5em;
 }
 
 .services {
@@ -18,6 +21,7 @@ h3 {
     //image
     div:nth-of-type(1) {
       img {
+        @extend %pop-out;
         width: 70px;
         height: 70px;
         @media screen and (max-width: $medium) {
@@ -37,6 +41,7 @@ h3 {
         margin: 0 0.5rem;
       }
       h4 {
+        @extend %pop-out;
         font-weight: 600;
         font-size: x-large;
         color: $orange;
@@ -50,7 +55,7 @@ h3 {
         }
       }
       p {
-        font-size: 0.65rem;
+        font-size: 13px;
       }
       width: 70%;
       text-align: start;
@@ -65,5 +70,5 @@ h3 {
   }
   align-content: space-evenly;
   width: 80%;
-  height: 70%;
+  height: 90%;
 }

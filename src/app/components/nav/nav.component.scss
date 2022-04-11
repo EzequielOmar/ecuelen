@@ -98,10 +98,13 @@ span {
     display: flex;
     flex-wrap: wrap;
   }
+  &,
+  ul > li > a {
+    font-size: x-large;
+  }
   display: block;
   width: 100vw;
   background: $black_traslucid;
-  padding: 0;
 }
 
 //links style
@@ -113,4 +116,5 @@ span {
   cursor: pointer;
   color: $white;
   text-decoration-line: none;
+  font-weight: 600;
 }

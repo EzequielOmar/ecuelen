@@ -1,25 +1,38 @@
-<section id="home" class="main-bg-image flex-wrap">
-  <app-nav
-    class="text-align-center w-100"
-    [lang]="language"
-    (languageSelected)="setLanguage($event)"
-  ></app-nav>
-  <app-main class="text-align-center flex-wrap w-100"></app-main>
-</section>
-<app-us id="us" class="w-100"></app-us>
-<app-services
-  id="services"
-  class="main-bg-image_black text-align-center flex-wrap"
-></app-services>
-<app-contact
-  id="contact"
-  class="text-align-center flex-wrap h-100"
-></app-contact>
+<div class="fullPage" #fullPage>
+  <section
+    id="main"
+    class="flex-wrap main-bg-image"
+    #main
+    (wheel)="blockScroll($event, 0)"
+  >
+    <app-nav
+      class="text-align-center w-100"
+      [lang]="language"
+      (languageSelected)="setLanguage($event)"
+    ></app-nav>
+    <app-main class="text-align-center flex-wrap w-100"></app-main>
+  </section>
+  <app-us id="us" class="w-100" (wheel)="blockScroll($event, 1)"></app-us>
+  <app-services
+    id="services"
+    class="main-bg-image text-align-center flex-wrap"
+    #services
+    (wheel)="blockScroll($event, 2)"
+  ></app-services>
+  <app-contact
+    id="contact"
+    class="text-align-center flex-wrap h-100"
+    (wheel)="blockScroll($event, 3)"
+  ></app-contact>
+</div>
 <!--WhatsApp button-->
 <a href="https://wa.link/xqdy2i" target="_blank" class="ws-button">
-  <img src="assets/images/whatsapp.png" alt="whatsapp-logo" />
+  <img
+    width="50"
+    height="50"
+    src="assets/images/whatsapp.webp"
+    alt="whatsapp-logo"
+  />
 </a>
 <!--Scroll to top button-->
-<button (click)="scrollToTop()" *ngIf="pageYoffset > 300" class="scroll-to-top">
-  &#x022C0;
-</button>
+<a href="#main" *ngIf="pageYoffset > 300" class="scroll-to-top"> &#x022C0; </a>

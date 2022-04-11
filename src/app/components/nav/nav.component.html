@@ -1,9 +1,11 @@
 <div class="brand">
   <a href="/">
     <img
+      width="200"
+      height="40"
       itemprop="logo"
       itemprop="url"
-      src="assets/brand/ecuelen.png"
+      src="assets/brand/ecuelen.webp"
       alt="ecuelen brand logo"
     />
   </a>
@@ -16,7 +18,7 @@
 </div>
 <nav [class.mobile]="mobile">
   <ul class="list-style-none flex w-100">
-    <li><a (click)="hideMobileMenu()" href="#home">Home</a></li>
+    <li><a (click)="hideMobileMenu()" href="#main">Home</a></li>
     <li>
       <a (click)="hideMobileMenu()" href="#us">{{ "menu.us" | translate }}</a>
     </li>

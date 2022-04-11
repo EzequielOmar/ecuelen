@@ -9,7 +9,7 @@
 //h1 text style
 h1 {
   & > span {
-    font-size: xxx-large;
+    font-size: 70px;
     @media screen and (max-width: $medium) {
       font-size: xx-large;
     }
@@ -29,7 +29,7 @@ h1 {
 button {
   img {
     height: 1.5rem;
-    padding: 0 1rem 0 0;
+    padding: 0 2rem 0 0;
     margin-top: 2px;
   }
   &:hover {

@@ -11,9 +11,10 @@
 //colors
 $red: #ff0000;
 $green: #3e8c3c;
-$orange: #cc6633;
+$orange: darken(#cc6633, 5);
 $white: #ffffff;
 $grey: #cccccc;
+$dark_grey: #4f4f4f;
 $black_traslucid: #00000087;
 $black: #000000;
 
@@ -23,9 +24,9 @@ $medium: 620px;
 $large: 725px;
 
 //body
-//html {
-//  scroll-behavior: smooth;
-//}
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -38,12 +39,22 @@ body::-webkit-scrollbar {
 }
 
 //general
-h3 {
+.black-title {
+  font-size: 1.5em;
   margin: 0;
   padding-top: 3rem;
+  font-weight: 600;
+  color: $dark_grey;
 }
 
 //classes
+%pop-out {
+  &:hover {
+    transform: scale(1.2);
+  }
+  transition: 0.5s ease-in-out;
+}
+
 .flex {
   display: flex;
 }
@@ -79,13 +90,5 @@ h3 {
 //background images
 .main-bg-image {
   @extend .h-100;
-  background: url("assets/images/main-bg.png");
-  background-size: cover;
+  background-size: cover !important;
 }
-
-.main-bg-image_black {
-  background: url("assets/images/main-bg_black.png");
-  background-size: cover;
-  @extend .h-100;
-}
-

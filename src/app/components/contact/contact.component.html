@@ -1,4 +1,4 @@
-<h3 class="w-100">{{ "contact.contact" | translate }}</h3>
+<h3 class="w-100 black-title">{{ "contact.contact" | translate }}</h3>
 <div id="contact" class="w-100 flex-wrap">
   <!--Contact Us message-->
   <div>
@@ -20,7 +20,11 @@
         <span *ngIf="contactForm.controls['name'].errors && sended">
           {{ "contact.form.required" | translate }}</span
         >
-        <img src="assets/images/contact_1-name.png" alt="user icon" />
+        <img
+          width="30"
+          height="30"
+          src="assets/images/contact_1-name.webp"
+          alt="user icon" />
         <input
           formControlName="name"
           type="name"
@@ -34,7 +38,11 @@
         <span *ngIf="contactForm.controls['email'].errors && sended">
           {{ "contact.form.required" | translate }}
         </span>
-        <img src="assets/images/contact_2-email.png" alt="email icon" />
+        <img
+          width="30"
+          height="22"
+          src="assets/images/contact_2-email.webp"
+          alt="email icon" />
         <input
           formControlName="email"
           type="email"
@@ -45,7 +53,11 @@
       /></label>
       <!--Phone Input-->
       <label for="tel" class="flex-wrap">
-        <img src="assets/images/contact_3-phone.png" alt="phone icon" />
+        <img
+          width="30"
+          height="30"
+          src="assets/images/contact_3-phone.webp"
+          alt="phone icon" />
         <input
           formControlName="phone"
           type="tel"
@@ -58,7 +70,12 @@
         <span *ngIf="contactForm.controls['message'].errors && sended">
           {{ "contact.form.required" | translate }}</span
         >
-        <img src="assets/images/contact_4-message.png" alt="chat icon" />
+        <img
+          width="30"
+          height="22"
+          src="assets/images/contact_4-message.webp"
+          alt="chat icon"
+        />
         <textarea
           rows="4"
           formControlName="message"
@@ -87,15 +104,30 @@
 <!--Footer-->
 <footer class="w-100 flex-wrap text-align-center">
   <a href="mailto:name@email.com" target="_blank" class="flex">
-    <img src="assets/images/contact_2-email.png" alt="email icon" />
+    <img
+      width="33"
+      height="25"
+      src="assets/images/contact_2-email.webp"
+      alt="email icon"
+    />
     <span>ecuelen@hotmail.com</span>
   </a>
   <div class="flex">
-    <img src="assets/images/contact_5-place.png" alt="email icon" />
+    <img
+      width="25"
+      height="25"
+      src="assets/images/contact_5-place.webp"
+      alt="email icon"
+    />
     <span>Buenos Aires, Argentina</span>
   </div>
   <a href="#home" class="flex">
-    <img src="assets/brand/logo_orange.png" alt="ecuelend brand logo" />
+    <img
+      width="17"
+      height="25"
+      src="assets/brand/logo_orange.webp"
+      alt="ecuelend brand logo"
+    />
     <span>ecuélen &#x000A9; 2022</span>
   </a>
 </footer>
